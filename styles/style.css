@@ -63,17 +63,36 @@ main{
 
 
 
-main > img{
+.img{
     width: 55%;
-    float: right;
-    
+    float: right; 
+    height: auto;
 }
+
+.img img{
+    width: 100%;
+    float: right; 
+    top: 0;
+    left: 0;
+}
+
+.img-hover,
+.img:hover > .img-color
+{
+    display: block;
+}
+
+.img-color,
+.img:hover > .img-hover{
+    display: none;
+}
+
 
 p{
-    font-size: 20px;
+    font-size: 18px;
 }
 
-div a{
+.content a{
     float: left;
     padding: 0.9em;
     text-decoration: none;
@@ -91,18 +110,18 @@ div a{
     
 }
 
-div a:last-of-type{
+.content a:last-of-type{
     background-color: #fff;
     color:#664488;
     
 }
 
-div > a:hover{
+.content > a:hover{
     background-color: #fff;
     color:#664488;
 }
 
-div > a:last-of-type:hover{
+.content > a:last-of-type:hover{
     background-color: #664488;
     color: #fff;
 }
@@ -120,4 +139,36 @@ h1{
 h1 span{
     font-weight: bold;
     display: block;
+}
+
+footer{
+    display: inline-block;
+}
+
+#rights{
+    float: right;
+}
+
+#icons{
+    float: left;
+}
+
+#icons > .icon{
+    margin-right: 20px;
+}
+
+.main-title::after{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 6px;
+    background-color: #664488;
+}
+
+.icon:hover{
+    color: #664488;
+}
+
+.icon{
+    color: #999;
 }
